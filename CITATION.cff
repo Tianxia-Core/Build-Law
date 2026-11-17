@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use or reference Build Law in research, engineering standards, or benchmarks, please cite it as below."
+title: "Build Law: Deterministic Constitutional Governance, Polyglot FFP Architecture, and Sub-Linear Token Economics for Autonomous Software Engineering"
+version: "5.1.0"
+date-released: "2026-11-17"
+license: MIT
+url: "https://github.com/Tianxia-Core/Build-Law"
+repository-code: "https://github.com/Tianxia-Core/Build-Law"
+authors:
+  - family-names: "Takem"
+    given-names: "Collins"
+    affiliation: "RASA-X-MACHINA"
+    website: "https://rasaxmachina.com/collins"
+keywords:
+  - autonomous-agents
+  - software-architecture
+  - polyglot-systems
+  - token-efficiency
+  - formal-verification
+  - devsecops
+  - gdpr

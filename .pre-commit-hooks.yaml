@@ -1,0 +1,6 @@
+- id: build-law-check
+  name: Build Law 14-Gate Static Verifier
+  description: Verifies zero plaintext secrets, zero Unicode prompt-injection tags, zero eval(), and zero TODO stubs (0 LLM tokens).
+  entry: build-law check
+  language: golang
+  pass_filenames: false

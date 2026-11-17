@@ -1,0 +1,13 @@
+{
+  "name": "build-law",
+  "version": "1.0.0",
+  "description": "Deterministic 14-Gate Constitutional Governance, Polyglot FFP<=8 & 5x-8.8x Token-Efficiency Skill for Claude Code",
+  "author": {
+    "name": "Collins Takem (RASA-X-MACHINA)",
+    "url": "https://rasaxmachina.com"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills/build-law"
+  ]
+}

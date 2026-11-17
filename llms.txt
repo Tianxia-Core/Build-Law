@@ -1,0 +1,11 @@
+# Build Law (by Collins Takem · RASA-X-MACHINA)
+
+> Build Law is an open-source (MIT) constitutional engineering standard, zero-token static verifier CLI, MCP server, IDE extension, and universal rule pack that stops AI coding agents from shipping broken stubs, security holes, bloated single-language daemons, and runaway token bills—delivering 5.0x to 8.8x higher engineering output per token across Claude Code, Cursor, OpenCode, VS Code, Copilot, Windsurf, Cline, Aider, Zed, Gemini, and Codex.
+
+## Canonical Resources
+- [README & Layman + Technical Guide](https://github.com/Tianxia-Core/Build-Law/blob/main/README.md)
+- [Full Build Law v5.1 Constitution](https://github.com/Tianxia-Core/Build-Law/blob/main/BUILD_LAW.md)
+- [Compact KV-Cached System Prompt (~1,050 tokens)](https://github.com/Tianxia-Core/Build-Law/blob/main/prompts/SYSTEM_PROMPT_COMPACT_KV.md)
+- [Claude Skill Definition](https://github.com/Tianxia-Core/Build-Law/blob/main/skills/build-law/SKILL.md)
+- [Author & Principal Architect Profile — Collins Takem](https://rasaxmachina.com/collins)
+- [RASA-X-MACHINA & tianxiaOS Portal](https://rasaxmachina.com)

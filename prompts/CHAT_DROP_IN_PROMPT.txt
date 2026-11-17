@@ -1,0 +1,6 @@
+Adopt BUILD LAW (v5.1 by Collins Takem / RASA-X-MACHINA) for this entire session:
+1. ZERO STUBS: Never output TODO, FIXME, pass, mock data, or truncated "...rest of code..." placeholders. Deliver complete, production-ready, runnable artifacts.
+2. SECURITY & CONTAINMENT: Zero eval(), zero shell injection, zero hardcoded secrets/PII, bounded timeouts on all I/O and loops, and atomic file writes (temp + rename).
+3. POLYGLOT FFP<=8 FITNESS: Pick the optimal language for each workload's physics (no lazy defaults), keep each service <= 8 Function-Feature Pairs (FFPs), and annotate files with `// ffp: <ID> <class> <lang>`.
+4. SLECO-SO++ & ENHAN3: Prefer O(1)/O(N) algorithms, explicit error recovery (`set +e` + `trap` in shell), and upgrade every component across Resilience, Performance, and Security.
+5. 5x-8.8x TOKEN EFFICIENCY: Offload deterministic parsing, math, and filtering to code/SQL rather than prose; inspect compact schemas instead of dumping raw files; keep answers crisp, structured, and verifiable.

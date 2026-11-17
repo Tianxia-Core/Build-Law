@@ -1,0 +1,505 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-17T15:45:01Z",
+    "component": {
+      "type": "application",
+      "name": "Build-Law",
+      "version": "v1.0.0",
+      "publisher": "Rasa-X-Machina (Proposed O\u00dc \u2014 Tallinn, Estonia)"
+    },
+    "properties": [
+      {
+        "name": "tianxia:build_law_edition",
+        "value": "v4.4-DASAVIDYAYANA-GLOBAL42-GDPR++"
+      },
+      {
+        "name": "tianxia:signature_algorithm",
+        "value": "Ed25519 (RFC 8032)"
+      },
+      {
+        "name": "tianxia:artifact_count",
+        "value": "19"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "application",
+      "name": "Build-Law-1.0.0-aarch64.AppImage",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8ca9a84af1213cde7448bcdbbe9994c526b90824241d850fa8f0b863c2348cf8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "appimage"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "Build-Law-1.0.0-aarch64.AppImage.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3094552"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "Build-Law-1.0.0-x86_64.AppImage",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ed664a418d33f75665182bbfca5ed684687fa25cf98070d9b54e4b182b1b2194"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "appimage"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "Build-Law-1.0.0-x86_64.AppImage.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3260440"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-1.0.0-1.aarch64.rpm",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8a91b94777af2532ac727c8222d91d050c5c8aadae6090fded49c9e91c33dc8d"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "rpm"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-1.0.0-1.aarch64.rpm.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1232704"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-1.0.0-1.x86_64.rpm",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3f1c8251a8286a93972858d7ca7db8963b16e24a5015296bc0cfeae452d9e453"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "rpm"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-1.0.0-1.x86_64.rpm.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1370638"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-claude-skill-v1.0.0.tar.gz",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cb19c4a067235b707003057c21da2f10fe3150e7c5bcd2e2a1f9053271a0367b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "tar.gz"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-claude-skill-v1.0.0.tar.gz.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "9413"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-claude-skill-v1.0.0.zip",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "48082266c98e1e5ddb2a283b8641f2a1dfcf8143120cc8505e005ca9109a5fe6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "elf-binary"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-claude-skill-v1.0.0.zip.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "11654"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-sentinel-1.0.0.vsix",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cde7c4bd99ebfd6789dcc077589a58109f4893c5b9aa152f66ea0b89bc5c1ea5"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "elf-binary"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-sentinel-1.0.0.vsix.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "5387"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-all-formats-universal.tar.gz",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ef483c88376a6a7b8f719523301b7ea137e579ec1d5b0606489ad97afa8bc507"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "tar.gz"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-all-formats-universal.tar.gz.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "2642152"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-android-aarch64",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "553d0c048f278581ff42a0307ffe9c476b8464b9e90019cf4456b35d38531385"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "elf-binary"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-android-aarch64.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3014816"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-android-aarch64.tar.gz",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b47132f995fc8a0e329ce3298b0acbc78f5dcd07e6f4edd00e449388743a2a20"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "tar.gz"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-android-aarch64.tar.gz.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1232903"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-android-arm64.apk",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1a69d44b88a095f4c74a33b1749973add3147a4a0e09ae5e424044f5e8916ef0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "android-apk"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-android-arm64.apk.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3711909"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-linux-aarch64",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "553d0c048f278581ff42a0307ffe9c476b8464b9e90019cf4456b35d38531385"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "elf-binary"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-linux-aarch64.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3014816"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-linux-aarch64.tar.gz",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6ebcb055d3fecbf98fe0504ba9c5317dd3b448a5b788813975ce52ce770c1bbd"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "tar.gz"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-linux-aarch64.tar.gz.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1232907"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-linux-x86_64",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "88b4a62fb5a1666aab0ea45253edabae17cbe06b001fbae6489977f681d45134"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "elf-binary"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-linux-x86_64.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3186848"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-linux-x86_64.tar.gz",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "74af548c04bd293175c009f387f214aa97809db97d3d8ebde94b0f50015b15de"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "tar.gz"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-linux-x86_64.tar.gz.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1370900"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-windows-x86_64.exe",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e66a743373de963d7639e4aba62577b667317de17d328ecbeb6d79d3fe4a78dc"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "windows-pe32+"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-windows-x86_64.exe.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "3308032"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law-v1.0.0-windows-x86_64.tar.gz",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "aa9192e732c31b8f70ad3f38195dd89b714194d8f8b2c52e8ca5bfec68467bc0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "tar.gz"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law-v1.0.0-windows-x86_64.tar.gz.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1416669"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law_1.0.0_amd64.deb",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "07871cca81f2a8b05f703aa3ee2e083355e51f3d5a3bde6952d907b72bd1534a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "deb"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law_1.0.0_amd64.deb.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1369836"
+        }
+      ]
+    },
+    {
+      "type": "application",
+      "name": "build-law_1.0.0_arm64.deb",
+      "version": "v1.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "82d024f89c55d6b2cc4d73bb400a33c10520363cd6d0c774a8a792581a96807e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "tianxia:format",
+          "value": "deb"
+        },
+        {
+          "name": "tianxia:signature",
+          "value": "build-law_1.0.0_arm64.deb.sig"
+        },
+        {
+          "name": "tianxia:size_bytes",
+          "value": "1231844"
+        }
+      ]
+    }
+  ]
+}

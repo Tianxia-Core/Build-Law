@@ -1,0 +1,19 @@
+name: 'Build Law 14-Gate Verification'
+description: 'Deterministic zero-token static verification of Build Law (zero stubs, zero leaked secrets, zero eval injection, SLECO-SO++ shell safety).'
+author: 'Collins Takem (RASA-X-MACHINA)'
+branding:
+  icon: 'shield'
+  color: 'purple'
+inputs:
+  path:
+    description: 'Target directory or file to verify'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Go & Run Build Law 14-Gate Check
+      shell: bash
+      run: |
+        set +e
+        go run "${{ github.action_path }}/cmd/build-law/main.go" check "${{ inputs.path }}"

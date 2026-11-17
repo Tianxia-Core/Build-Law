@@ -1,0 +1,5 @@
+{
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "buildLaw.auditOnSave": true,
+  "buildLaw.autoEnsureWorkspaceRules": true
+}

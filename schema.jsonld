@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Build Law",
+      "alternateName": "TianxiaOS Build Law v5.1",
+      "version": "1.0.0",
+      "license": "https://opensource.org/licenses/MIT",
+      "codeRepository": "https://github.com/Tianxia-Core/Build-Law",
+      "programmingLanguage": [
+        "Go",
+        "JavaScript",
+        "Markdown",
+        "Nix",
+        "Bash"
+      ],
+      "description": "Deterministic 4-Pillar, 14-Gate constitutional governance, Polyglot FFP<=8 architecture, SLECO-SO++ runtime resilience, and 5.0x\u20138.8x token-efficiency toolkit for AI coding agents and engineering teams.",
+      "author": {
+        "@type": "Person",
+        "name": "Collins Takem",
+        "jobTitle": "Founder & Principal Systems Architect",
+        "url": "https://rasaxmachina.com/collins",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "RASA-X-MACHINA",
+          "url": "https://rasaxmachina.com"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "build-law-sentinel",
+  "displayName": "Build Law \u2014 14-Gate AI Engineering & Token-Efficiency Sentinel",
+  "description": "Enforces Build Law across VS Code, Cursor, Windsurf & Copilot: 14-Gate zero-stub/zero-secret verification, workspace rule provisioning, and KV-cached prompt injection.",
+  "version": "1.0.0",
+  "publisher": "rasaxmachina",
+  "author": {
+    "name": "Collins Takem (RASA-X-MACHINA)",
+    "url": "https://rasaxmachina.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tianxia-Core/Build-Law.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Linters",
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "build-law",
+    "ai-agents",
+    "cursor",
+    "copilot",
+    "claude",
+    "opencode",
+    "devsecops",
+    "architecture"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "buildLaw.auditActiveFile",
+        "title": "Build Law: Audit Active File (14-Gate Check)"
+      },
+      {
+        "command": "buildLaw.provisionWorkspace",
+        "title": "Build Law: Provision Workspace Rules (All AI Tools)"
+      },
+      {
+        "command": "buildLaw.copyCompactPrompt",
+        "title": "Build Law: Copy Distilled System Prompt to Clipboard"
+      }
+    ],
+    "configuration": {
+      "title": "Build Law",
+      "properties": {
+        "buildLaw.auditOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Run zero-token Build Law 14-Gate static diagnostics automatically on file save."
+        },
+        "buildLaw.autoEnsureWorkspaceRules": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically ensure workspace AI instruction files stay synchronized with Build Law."
+        }
+      }
+    }
+  }
+}
