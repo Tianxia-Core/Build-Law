@@ -491,14 +491,16 @@ def sync_tailscale_mesh() -> dict[str, Any]:
         )
         if remote_uid == "0":
             remote_cmd += (
-                " && if [ -d /etc/systemd/system ]; then "
+                " && UNIT_DIR=/etc/systemd/system; "
+                "if [ ! -w /etc/systemd/system ] && [ -d /run/systemd/system ]; then UNIT_DIR=/run/systemd/system; fi; "
+                "if [ -d \"${UNIT_DIR}\" ]; then "
                 "printf '%s\\n' '[Unit]' 'Description=TianxiaOS Universal Build Law Multi-Harness Enforcer' '[Service]' 'Type=oneshot' "
                 f"'ExecStart=/usr/bin/env python3 {remote_cfg_dir}/tx_build_law_universal_enforcer.py --quiet' "
-                "'MemoryMax=128M' 'TasksMax=32' 'NoNewPrivileges=yes' > /etc/systemd/system/tx-build-law-enforcer.service && "
+                "'MemoryMax=128M' 'TasksMax=32' 'NoNewPrivileges=yes' > \"${UNIT_DIR}/tx-build-law-enforcer.service\" && "
                 "printf '%s\\n' '[Unit]' 'Description=Periodic Universal Build Law Enforcement Timer' '[Timer]' "
                 "'OnBootSec=1min' 'OnUnitActiveSec=15min' 'Persistent=true' '[Install]' 'WantedBy=timers.target' "
-                "> /etc/systemd/system/tx-build-law-enforcer.timer && "
-                "systemctl daemon-reload && systemctl enable --now tx-build-law-enforcer.timer >/dev/null 2>&1 || true; fi"
+                "> \"${UNIT_DIR}/tx-build-law-enforcer.timer\" && "
+                "systemctl daemon-reload && systemctl start tx-build-law-enforcer.timer >/dev/null 2>&1 || true; fi"
             )
         exec_res = subprocess.run(
             ["ssh", "-o", "BatchMode=yes", "-o", "ConnectTimeout=6", alias, remote_cmd],
