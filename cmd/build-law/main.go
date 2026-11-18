@@ -12,6 +12,7 @@ import (
 	"fmt"
 	"io/fs"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"regexp"
 	"runtime"
@@ -21,17 +22,19 @@ import (
 )
 
 const (
-	Version = "1.0.0"
+	Version = "1.2.0"
 	Edition = "v5.1-SOVEREIGN-CONSTITUTION"
 )
 
 var (
-	ffpHeaderRe  = regexp.MustCompile(`(?i)^(?:#|//|/\*+|<!--|--|;)\s*ffp:\s*([A-Za-z0-9_.:-]+)\s+([A-Za-z0-9_/-]+)\s+([A-Za-z0-9_+#-]+)`)
-	blindSetERe  = regexp.MustCompile(`(?m)^\s*set\s+-[a-zA-Z]*e[a-zA-Z]*\b`)
-	evalCallRe   = regexp.MustCompile(`\beval\s*\(`)
-	stubTokenRe  = regexp.MustCompile(`\b(TODO|FIXME|unimplemented!|todo!)\b`)
-	secretLeakRe = regexp.MustCompile(`(sk_live_[0-9a-zA-Z_]{12,}|gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z\-_]{30,})`)
-	bidiInjectRe = regexp.MustCompile(`[\x{202A}-\x{202E}\x{2066}-\x{2069}]`)
+	ffpHeaderRe       = regexp.MustCompile(`(?i)^(?:#|//|/\*+|<!--|--|;)\s*ffp:\s*([A-Za-z0-9_.:-]+)\s+([A-Za-z0-9_/-]+)\s+([A-Za-z0-9_+#-]+)`)
+	blindSetERe       = regexp.MustCompile(`(?m)^\s*set\s+-[a-zA-Z]*e[a-zA-Z]*\b`)
+	evalCallRe        = regexp.MustCompile(`\beval\s*\(`)
+	stubTokenRe       = regexp.MustCompile(`\b(TODO|FIXME|unimplemented!|todo!)\b`)
+	secretLeakRe      = regexp.MustCompile(`(sk_live_[0-9a-zA-Z_]{12,}|gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|AIza[0-9A-Za-z\-_]{30,})`)
+	bidiInjectRe      = regexp.MustCompile(`[\x{202A}-\x{202E}\x{2066}-\x{2069}]`)
+	cleanroomExtRe    = regexp.MustCompile(`(?i)\.(xlsx|xls|sqlite3?|db|keystore|jks|p12|pfx)$`)
+	cleanroomNameRe   = regexp.MustCompile(`(?i)((^|/)\.env(\..+)?$|grinfi|8raise|career_opportunities\.json|merged_signals\.jsonl)`)
 )
 
 const CompactPrompt = `# BUILD LAW — Deterministic Engineering & Token-Efficiency Constitution (v5.1)
@@ -138,6 +141,16 @@ func auditPath(target string, requireFFP bool) AuditReport {
 			return nil
 		}
 		ext := filepath.Ext(path)
+		normRel := filepath.ToSlash(path)
+		baseName := d.Name()
+		if baseName != ".env.example" && baseName != "config.example.json" && baseName != "merged_signals.schema.json" {
+			if cleanroomExtRe.MatchString(normRel) || cleanroomNameRe.MatchString(normRel) {
+				findings = append(findings, GateFinding{
+					File: path, Gate: "07-DHUMAVATI-CLEANROOM", Severity: "WARN",
+					Detail: "Internal/populated database, spreadsheet, or .env artifact detected; exclude from public Clean-Room releases",
+				})
+			}
+		}
 		if !isCodeExt(ext) && d.Name() != "AGENTS.md" && d.Name() != "BUILD_LAW.md" && d.Name() != "CLAUDE.md" {
 			return nil
 		}
@@ -405,13 +418,34 @@ func runMCPStdio() {
 	}
 }
 
+func delegateExecutiveTool(bin string, subArgs []string) bool {
+	binPath, err := exec.LookPath(bin)
+	if err != nil || binPath == "" {
+		return false
+	}
+	c := exec.Command(binPath, subArgs...)
+	c.Stdout = os.Stdout
+	c.Stderr = os.Stderr
+	c.Stdin = os.Stdin
+	if err := c.Run(); err != nil {
+		if exitErr, ok := err.(*exec.ExitError); ok {
+			os.Exit(exitErr.ExitCode())
+		}
+		os.Exit(1)
+	}
+	return true
+}
+
 func printUsage() {
 	fmt.Printf("Build Law v%s (%s) — Deterministic AI Engineering Constitution & 14-Gate Verifier\n", Version, Edition)
 	fmt.Println("Engineered by Collins Takem (RASA-X-MACHINA · https://rasaxmachina.com)")
 	fmt.Println("\nUsage:")
 	fmt.Println("  build-law check [path] [--require-ffp] [--json]   Run <5ms 14-Gate static verification ($0.00, 0 tokens)")
 	fmt.Println("  build-law init [path]                             Scaffold Build Law across Claude/Cursor/OpenCode/VSCode/Copilot/etc.")
-	fmt.Println("  build-law enforce-global                          Install Build Law globally across all 18+ AI harnesses in $HOME")
+	fmt.Println("  build-law init-clean [path]                       Bootstrap fresh zero-PII Clean-Room workspace (via nimbus2 or standalone)")
+	fmt.Println("  build-law ship [flags...]                         Delegate autonomous grouped commit, Clean-Room & PR review to nimbus2")
+	fmt.Println("  build-law estimate [flags...]                     Delegate pre-build algebraic sizing & EUR token math to fc-estimator/nimbus2")
+	fmt.Println("  build-law enforce-global                          Install Build Law globally across all 20+ AI harnesses in $HOME")
 	fmt.Println("  build-law prompt [--compact|--full]               Emit standalone system/chat prompt")
 	fmt.Println("  build-law mcp-stdio                               Start Model Context Protocol (MCP) JSON-RPC 2.0 stdio server")
 	fmt.Println("  build-law status [--json]                         Display runtime & harness governance status")
@@ -486,6 +520,33 @@ func main() {
 		fmt.Print(CompactPrompt)
 	case "mcp-stdio", "mcp":
 		runMCPStdio()
+	case "init-clean":
+		if delegateExecutiveTool("nimbus2", append([]string{"init-clean"}, args[1:]...)) {
+			return
+		}
+		if err := os.MkdirAll(filepath.Join(target, "config"), 0o755); err != nil {
+			fmt.Fprintf(os.Stderr, "[build-law] init-clean error: %v\n", err)
+			os.Exit(1)
+		}
+		_ = writeAtomic(filepath.Join(target, "config", "sovereign.config.json"), []byte("{\n  \"edition\": \"PUBLIC_CLEANROOM_SEED\",\n  \"default_currency\": \"EUR\",\n  \"build_law_enforced\": true\n}\n"), 0o644)
+		_ = writeAtomic(filepath.Join(target, ".gitignore"), []byte("*.sqlite3\n*.db\n*.xlsx\n*.xls\n*.pem\n!*.pub.pem\n.env\n!.env.example\n"), 0o644)
+		_, _ = provisionProject(target)
+		fmt.Printf("[build-law] Initialized fresh zero-PII Clean-Room workspace in %s\n", target)
+	case "ship", "review-diff":
+		if delegateExecutiveTool("nimbus2", args) {
+			return
+		}
+		fmt.Fprintln(os.Stderr, "[build-law] Companion Executive Build Manager `nimbus2` not on $PATH; install from https://github.com/Tianxia-Core/nimbus2/releases/latest")
+		os.Exit(1)
+	case "estimate":
+		if delegateExecutiveTool("fc-estimator", append([]string{"calc"}, args[1:]...)) {
+			return
+		}
+		if delegateExecutiveTool("nimbus2", args) {
+			return
+		}
+		fmt.Fprintln(os.Stderr, "[build-law] Companion `fc-estimator` / `nimbus2` not on $PATH; install from https://github.com/Tianxia-Core/FC-Estimator/releases/latest")
+		os.Exit(1)
 	case "status":
 		rep := auditPath(target, false)
 		if asJSON {
