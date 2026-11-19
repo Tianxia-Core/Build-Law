@@ -1,20 +1,6 @@
-# Build Law (by Collins Takem · RASA-X-MACHINA)
-
-> Build Law is an open-source (MIT) constitutional engineering standard, zero-token static verifier CLI, MCP server, IDE extension, and universal rule pack that stops AI coding agents from shipping broken stubs, security holes, bloated single-language daemons, and runaway token bills—delivering 5.0x to 8.8x higher engineering output per token across Claude Code, Cursor, OpenCode, VS Code, Copilot, Windsurf, Cline, Aider, Zed, Gemini, and Codex.
-
-## Canonical Resources
-- [README & Layman + Technical Guide](https://github.com/Tianxia-Core/Build-Law/blob/main/README.md)
-- [Full Build Law v5.1 Constitution](https://github.com/Tianxia-Core/Build-Law/blob/main/BUILD_LAW.md)
-- [Compact KV-Cached System Prompt (~1,050 tokens)](https://github.com/Tianxia-Core/Build-Law/blob/main/prompts/SYSTEM_PROMPT_COMPACT_KV.md)
-- [Claude Skill Definition](https://github.com/Tianxia-Core/Build-Law/blob/main/skills/build-law/SKILL.md)
-- [Author & Principal Architect Profile — Collins Takem](https://rasaxmachina.com/collins)
-- [RASA-X-MACHINA & tianxiaOS Portal](https://rasaxmachina.com)
-
----
-
 # Build Law — Sovereign Autonomous Engineering & Token-Efficiency Constitution
 
-> **Edition:** `v5.1-SOVEREIGN-CONSTITUTION` · **License:** `MIT`
+> **Edition:** `v5.3-SOVEREIGN-CONSTITUTION` · **CLI Release:** `v1.4.0` · **License:** `MIT`
 > **Architected by:** **Collins Takem** — Founder & Principal Systems Architect, **RASA-X-MACHINA** ([rasaxmachina.com](https://rasaxmachina.com) · Makers of [`tianxiaOS`](https://github.com/Tianxia-Core/TianxiaOS))
 > **Scope:** Universal, Model-Agnostic & Platform-Agnostic (Claude, GPT, Gemini, DeepSeek, Qwen, Local Quantized Models · Claude Code, Cursor, OpenCode, VS Code, GitHub Copilot, Windsurf, Cline, Roo Code, Continue, Aider, Zed, JetBrains Junie, Goose, Antigravity & Custom Agent Harnesses)
 
@@ -117,6 +103,16 @@ Treat LLM context windows and inference spend as scarce engineering capital:
 5. **Compact Semantic Pointers & Hash Handoffs**: Pass `path#Lstart-Lend` references and SHA-256/Blake3 digests across subagents instead of duplicating multi-kilobyte text blocks.
 6. **Immutable Prefix KV-Cache Pinning & Tiered Model Routing**: Keep system rules byte-stable at the prompt prefix (`75%–90%` cache-hit cost reduction) and route subtasks to the lightest sufficient model tier, reserving frontier reasoning strictly for novel architecture, security proofs, and complex synthesis.
 7. **Checksum Delta Short-Circuiting**: Compare SHA-256 digests before rebuilding databases, packages, or media assets; skip no-op rebuilds in $O(1)$.
+
+### 4.3 `SECM` — Synergistic, Effective, Counterintuitive & Maximal Engineering Law
+Every unit, service, contract, and user-facing surface built under Build Law must satisfy the four **SECM** design vectors:
+1. **Synergistic**: Never build disconnected silos. Every new unit (`<= 8` FFPs) must expose composable IPC/MCP/CLI interfaces and Merkle-chained provenance receipts that compound the capabilities of neighboring services (e.g., `nimbus²` + `GitGate` + `Scour` + `AlatyrAtal`).
+2. **Effective**: Optimize for real-world latency, tail-risk containment, and unit-economics margin rather than vanity complexity. Enforce strict tiering (fast-lane `O(1)` verification for routine sub-threshold operations; full counterfactual/cryptographic quorum for high-value or irreversible state transitions).
+3. **Counterintuitive**: Challenge wasteful industry defaults when physics and information theory prove the inverse superior:
+   - **Inverse-Exhaust Valuation**: Reward semantic compression and mutual-information-per-joule density over raw token/compute bloat (`500 -> 2` token AST/DAG projection > verbose prose).
+   - **Zero-Token Governance (`System-0`)**: Enforce AI quality, Clean-Room privacy, and PR safety with deterministic `$0.00` compiled binaries (`build-law`, `gitgate`) rather than spending more LLM tokens reviewing LLM output.
+   - **Asymmetric Velocity-to-Permanence**: Keep operational execution frictionless and high-velocity while anchoring settlement and audit trails in immutable cryptographic roots.
+4. **Maximal**: Realize every production unit end-to-end across its full operational perimeter—core compiled library, CLI + MCP server, formal/polyglot contract schema, persistent WAL ledger, accessible UI cockpit, reproducible `flake.nix`, and Ed25519-signed multi-OS release—with zero stubs.
 
 ---
 

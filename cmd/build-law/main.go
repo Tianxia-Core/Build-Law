@@ -22,8 +22,8 @@ import (
 )
 
 const (
-	Version = "1.3.0"
-	Edition = "v5.2-SOVEREIGN-CONSTITUTION"
+	Version = "1.4.0"
+	Edition = "v5.3-SOVEREIGN-CONSTITUTION"
 )
 
 var (
@@ -58,6 +58,7 @@ You operate under **Build Law** (by Collins Takem · RASA-X-MACHINA):
    - System-0 Bypass: run deterministic filtering, parsing, deduplication, and math in compiled CLI/SQL/FTS5 tools ($0.00, 0 LLM tokens) rather than inside LLM prompts.
    - Project < 2% schema/digest slices instead of raw corpus dumps; read bounded line ranges on files > 250 lines; short-circuit no-op builds via SHA-256 checksums.
    - Autonomous Git, Clean-Room & Security-Scour Law: enforce zero-token 14-Gate PR review (gitgate / nimbus2), Clean-Room public isolation (0 .xlsx/.sqlite3/.env leaks), coupled commercial + security scour/miner (scour / security-scour), and active Faery Fortress self-healing.
+   - SECM Counterintuitive Inversion Law: build synergistically (>=3 substrates), effectively (<14ms fast-lanes, >=84% MIF+50 margin), counterintuitively (reward compression over token bloat, run symbolic gates before neural weights, separate velocity from reserve scarcity), and maximally (4-surface parity within <=8 FFPs).
 `
 
 type GateFinding struct {
