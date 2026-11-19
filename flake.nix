@@ -1,6 +1,6 @@
 # ffp: FFP-NIX-FLAKE declarative nix
 {
-  description = "Build-Law v1.3.0 — Build Law Deterministic 14-Gate AI Engineering Verifier, Multi-Tool Provisioner & MCP Server";
+  description = "Build-Law v1.4.0 — Build Law Deterministic 14-Gate AI Engineering Verifier, Multi-Tool Provisioner & MCP Server";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -12,12 +12,12 @@
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       artifactMeta = {
         "x86_64-linux" = {
-          url = "https://github.com/Tianxia-Core/Build-Law/releases/download/v1.3.0/build-law-v1.3.0-linux-x86_64";
-          sha256 = "6c58ce3834cd5f38a8e5fd7e88f0894d5bbeee8b3c69de676d0f685ecc8843cd";
+          url = "https://github.com/Tianxia-Core/Build-Law/releases/download/v1.4.0/build-law-v1.4.0-linux-x86_64";
+          sha256 = "142b0bb5f081403d9683780f0634a45e74c5887154b97e57219f8b60e8101415";
         };
         "aarch64-linux" = {
-          url = "https://github.com/Tianxia-Core/Build-Law/releases/download/v1.3.0/build-law-v1.3.0-linux-aarch64";
-          sha256 = "a62e6970763cdf06f05b8d39d0863e6f45ecd6ab2824bb57faab8b149dd659dc";
+          url = "https://github.com/Tianxia-Core/Build-Law/releases/download/v1.4.0/build-law-v1.4.0-linux-aarch64";
+          sha256 = "46813327bbcabfdf910625d4e358a5ec85ccb59d3fed255ae54d59d72aed78a9";
         };
       };
       mkSovereignPkg = pkgs: system:
@@ -26,7 +26,7 @@
         in
         pkgs.stdenvNoCC.mkDerivation {
           pname = "build-law";
-          version = "1.3.0";
+          version = "1.4.0";
           src = pkgs.fetchurl {
             inherit (metaInfo) url sha256;
           };
